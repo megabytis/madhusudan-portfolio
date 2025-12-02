@@ -2,9 +2,6 @@
 
 A clean, modern, and performance-first portfolio website designed for a Backend-Focused Full-Stack Developer. Built with **Vanilla HTML, CSS, and JavaScript**, this project emphasizes minimalism, speed, and a professional "developer-first" aesthetic inspired by Vercel and Linear.
 
-![Portfolio Preview](./img/preview.png)
-_(Note: Add a screenshot of your portfolio to the `img` folder and name it `preview.png`)_
-
 ## 🎨 Design Philosophy
 
 - **Minimalist & Dark**: A sleek dark mode theme using a curated palette of black, slate, and charcoal.
