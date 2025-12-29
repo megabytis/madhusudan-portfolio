@@ -17,6 +17,23 @@
     />
   </head>
   <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-logo">Madhusudan</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#timeline" class="nav-link">Journey</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="container hero-section fade-in-section">
       <div class="hero-grid">
@@ -41,7 +58,9 @@
           </p>
 
           <div class="hero-actions">
-            <a href="./assets/madhusudan_resume.pdf" class="btn btn-primary">Resume</a>
+            <a href="./assets/madhusudan_resume.pdf" class="btn btn-primary"
+              >Resume</a
+            >
             <a
               href="mailto:madhusudanbhukta.dev@gmail.com"
               class="btn btn-secondary"
@@ -57,14 +76,13 @@
       <h3 class="section-title">Selected Work</h3>
       <div class="projects-list">
         <!-- Project 1 -->
-        <article class="project-card">
+        <article class="project-card hover-lift">
           <div class="project-preview">
-            <div
-              class="project-thumbnail-placeholder"
-              style="background: linear-gradient(45deg, #111, #222)"
-            >
-              ShopNexus UI
-            </div>
+            <img
+              src="img/shopnexus-ui.png"
+              alt="ShopNexus E-commerce Platform UI"
+              class="project-thumbnail"
+            />
           </div>
           <div class="project-details">
             <div class="project-header">
@@ -102,15 +120,14 @@
           </div>
         </article>
 
-        <!-- Project 2 -->
+        <!-- Project 2
         <article class="project-card">
           <div class="project-preview">
-            <div
-              class="project-thumbnail-placeholder"
-              style="background: linear-gradient(45deg, #1a1a1a, #2a2a2a)"
+            <img
+              src="img/blogwebapp-ui.png"
+              alt="Blog WebApp Content Platform UI"
+              class="project-thumbnail"
             >
-              Blog WebApp UI
-            </div>
           </div>
           <div class="project-details">
             <div class="project-header">
@@ -146,17 +163,61 @@
               >
             </div>
           </div>
-        </article>
+        </article> -->
 
         <!-- Project 3 -->
-        <article class="project-card">
+        <article class="project-card hover-lift">
           <div class="project-preview">
-            <div
-              class="project-thumbnail-placeholder"
-              style="background: linear-gradient(45deg, #0f0f0f, #1f1f1f)"
-            >
-              Devtinder UI
+            <img
+              src="img/learnsphere-ui.png"
+              alt="LearnSphere Learning Management System UI"
+              class="project-thumbnail"
+            />
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h4 class="project-name">LearnSphere</h4>
+              <span class="project-tag">Learning Platform</span>
             </div>
+            <p class="project-summary text-secondary">
+              A full-stack Learning Management System with user roles, course
+              management, lesson content, and payment integration.
+            </p>
+            <div class="project-tech">
+              <span>React</span><span>Node.js</span><span>Express</span
+              ><span>MongoDB</span><span>Stripe</span>
+            </div>
+            <ul class="project-outcomes text-secondary">
+              <li>Multi-role authentication system</li>
+              <li>Course and lesson management</li>
+              <li>Payment integration with Stripe</li>
+              <li>Responsive UI with modern design</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://learn-sphere-neon.vercel.app/"
+                target="_blank"
+                class="btn btn-secondary btn-sm"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/megabytis/LearnSphere"
+                target="_blank"
+                class="btn btn-secondary btn-sm"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card hover-lift">
+          <div class="project-preview">
+            <img
+              src="img/devtinder-ui.png"
+              alt="Devtinder Developer Matching Platform UI"
+              class="project-thumbnail"
+            />
           </div>
           <div class="project-details">
             <div class="project-header">
@@ -202,44 +263,44 @@
       <div class="skills-wrapper">
         <div class="skills-marquee marquee-left">
           <div class="skills-content">
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">Node.js</span>
-            <span class="skill-pill">Express.js</span>
-            <span class="skill-pill">MongoDB</span>
-            <span class="skill-pill">REST APIs</span>
-            <span class="skill-pill">Authentication</span>
-            <span class="skill-pill">Git</span>
-            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill hover-lift">JavaScript</span>
+            <span class="skill-pill hover-lift">Node.js</span>
+            <span class="skill-pill hover-lift">Express.js</span>
+            <span class="skill-pill hover-lift">MongoDB</span>
+            <span class="skill-pill hover-lift">REST APIs</span>
+            <span class="skill-pill hover-lift">Authentication</span>
+            <span class="skill-pill hover-lift">Git</span>
+            <span class="skill-pill hover-lift">GitHub</span>
             <!-- Duplicate for seamless loop -->
-            <span class="skill-pill">JavaScript</span>
-            <span class="skill-pill">Node.js</span>
-            <span class="skill-pill">Express.js</span>
-            <span class="skill-pill">MongoDB</span>
-            <span class="skill-pill">REST APIs</span>
-            <span class="skill-pill">Authentication</span>
-            <span class="skill-pill">Git</span>
-            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill hover-lift">JavaScript</span>
+            <span class="skill-pill hover-lift">Node.js</span>
+            <span class="skill-pill hover-lift">Express.js</span>
+            <span class="skill-pill hover-lift">MongoDB</span>
+            <span class="skill-pill hover-lift">REST APIs</span>
+            <span class="skill-pill hover-lift">Authentication</span>
+            <span class="skill-pill hover-lift">Git</span>
+            <span class="skill-pill hover-lift">GitHub</span>
           </div>
         </div>
         <div class="skills-marquee marquee-right">
           <div class="skills-content">
-            <span class="skill-pill">Postman</span>
-            <span class="skill-pill">Render</span>
-            <span class="skill-pill">Vercel</span>
-            <span class="skill-pill">VS Code</span>
-            <span class="skill-pill">Thunder Client</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">OpenAI API</span>
-            <span class="skill-pill">Debugging</span>
+            <span class="skill-pill hover-lift">Postman</span>
+            <span class="skill-pill hover-lift">Render</span>
+            <span class="skill-pill hover-lift">Vercel</span>
+            <span class="skill-pill hover-lift">VS Code</span>
+            <span class="skill-pill hover-lift">Thunder Client</span>
+            <span class="skill-pill hover-lift">Python</span>
+            <span class="skill-pill hover-lift">OpenAI API</span>
+            <span class="skill-pill hover-lift">Debugging</span>
             <!-- Duplicate for seamless loop -->
-            <span class="skill-pill">Postman</span>
-            <span class="skill-pill">Render</span>
-            <span class="skill-pill">Vercel</span>
-            <span class="skill-pill">VS Code</span>
-            <span class="skill-pill">Thunder Client</span>
-            <span class="skill-pill">Python</span>
-            <span class="skill-pill">OpenAI API</span>
-            <span class="skill-pill">Debugging</span>
+            <span class="skill-pill hover-lift">Postman</span>
+            <span class="skill-pill hover-lift">Render</span>
+            <span class="skill-pill hover-lift">Vercel</span>
+            <span class="skill-pill hover-lift">VS Code</span>
+            <span class="skill-pill hover-lift">Thunder Client</span>
+            <span class="skill-pill hover-lift">Python</span>
+            <span class="skill-pill hover-lift">OpenAI API</span>
+            <span class="skill-pill hover-lift">Debugging</span>
           </div>
         </div>
       </div>
@@ -270,7 +331,9 @@
             <h4 class="timeline-role">
               Bachelor of Computer Applications (BCA)
             </h4>
-            <p class="timeline-place text-secondary">NIIS Institute of Business Administration, Bhubaneswar, Odisha</p>
+            <p class="timeline-place text-secondary">
+              NIIS Institute of Business Administration, Bhubaneswar, Odisha
+            </p>
           </div>
         </div>
         <div class="timeline-item">
@@ -278,7 +341,9 @@
           <div class="timeline-content">
             <span class="timeline-date text-secondary">2022</span>
             <h4 class="timeline-role">Higher Secondary (12th)</h4>
-            <p class="timeline-place text-secondary">e-Tech Residential Higher Secondary School, Dhenkanal, Odisha</p>
+            <p class="timeline-place text-secondary">
+              e-Tech Residential Higher Secondary School, Dhenkanal, Odisha
+            </p>
           </div>
         </div>
       </div>

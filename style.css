@@ -41,6 +41,75 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   position: relative;
+  padding-top: 80px;
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: var(--accent-primary);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 /* Background Grid Pattern */
@@ -141,13 +210,15 @@ h6 {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
+  position: relative;
 }
 
 .section-title::after {
   content: "";
   height: 1px;
   flex: 1;
-  background-color: var(--border-subtle);
+  background: linear-gradient(90deg, var(--accent-primary), transparent);
+  opacity: 0.5;
 }
 
 /* Buttons */
@@ -251,11 +322,25 @@ h6 {
   font-size: 3.5rem;
   line-height: 1.1;
   margin-bottom: var(--space-xs);
-  background: linear-gradient(to bottom right, #ffffff 30%, #a1a1a1 100%);
+  background: linear-gradient(135deg, #ffffff, #a1a1a1 60%, #3291ff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  position: relative;
+}
+
+.hero-name::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  animation: blink 1s infinite;
+  color: var(--accent-primary);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .hero-role {
@@ -300,6 +385,7 @@ h6 {
   transition: var(--transition-smooth);
   position: relative;
   overflow: hidden; /* For spotlight effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Spotlight Effect Layer */
@@ -326,9 +412,9 @@ h6 {
 }
 
 .project-card:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8);
+  border-color: var(--accent-primary);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -10px rgba(50, 145, 255, 0.2), 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .project-card > * {
@@ -339,6 +425,20 @@ h6 {
 .project-preview {
   height: 100%;
   min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-thumbnail {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  object-position: center;
+  background: linear-gradient(45deg, #1a1a1a, #222);
 }
 
 .project-thumbnail-placeholder {
@@ -562,14 +662,39 @@ h6 {
 /* Animations */
 .fade-in-section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.21, 0.92, 0.27, 0.99), transform 0.8s cubic-bezier(0.21, 0.92, 0.27, 0.99);
   will-change: opacity, visibility;
 }
 
 .fade-in-section.visible {
   opacity: 1;
   transform: none;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced hover animations */
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.21, 0.92, 0.27, 0.99), box-shadow 0.3s cubic-bezier(0.21, 0.92, 0.27, 0.99);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced button animations */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -602,7 +727,7 @@ h6 {
   }
 
   .project-preview {
-    min-height: 180px;
+    min-height: 200px;
   }
 
   .footer-content {
