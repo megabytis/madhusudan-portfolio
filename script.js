@@ -40,4 +40,55 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.setProperty("--mouse-y", `${y}px`);
     });
   });
+
+  // Scroll Progress Bar
+  const scrollProgress = document.getElementById("scroll-progress");
+  window.addEventListener("scroll", () => {
+    const totalScroll = document.documentElement.scrollTop;
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scroll = `${(totalScroll / windowHeight) * 100}%`;
+    if (scrollProgress) scrollProgress.style.width = scroll;
+  });
+
+  // Typewriter Effect
+  const typewriterElement = document.getElementById("typewriter");
+  if (typewriterElement) {
+    const phrases = [
+      "Backend & GenAI Developer",
+      "Building APIs & AI-powered systems",
+      "Node.js & Python Integrator"
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typewriterElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typingSpeed = 1500; // Pause at end of phrase
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingSpeed = 500; // Pause before new phrase
+      }
+
+      setTimeout(type, typingSpeed);
+    }
+    
+    // Start typing
+    setTimeout(type, 1000);
+  }
 });

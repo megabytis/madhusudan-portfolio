@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Madhusudan Bhukta | Backend-Focused Full-Stack Developer</title>
+    <title>Madhusudan Bhukta | Backend & GenAI Developer</title>
     <meta
       name="description"
-      content="Portfolio of Madhusudan Bhukta, a Backend-Focused Full-Stack Developer specializing in Node.js, Express, and scalable web apps."
+      content="Portfolio of Madhusudan Bhukta, a Backend & GenAI Developer specializing in building APIs and AI-powered systems with Node.js & Python."
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +17,10 @@
     />
   </head>
   <body>
+    <div class="noise-overlay"></div>
+    <div class="scroll-progress-container">
+      <div class="scroll-progress-bar" id="scroll-progress"></div>
+    </div>
     <nav class="navbar">
       <div class="nav-container">
         <a href="#" class="nav-logo">Madhusudan</a>
@@ -49,12 +53,9 @@
         </div>
         <div class="hero-content">
           <h1 class="hero-name">Madhusudan Bhukta</h1>
-          <h2 class="hero-role">Backend-Focused Full-Stack Developer</h2>
+          <h2 class="hero-role"><span id="typewriter"></span><span class="type-cursor">|</span></h2>
           <p class="hero-subline text-secondary">
-            Backend-heavy full-stack developer focused on building scalable
-            systems, secure APIs, and production-ready backend logic. Strong in
-            JavaScript, Node.js, Express, MongoDB, and real deployment
-            workflows.
+            Building scalable APIs and AI-powered systems. Specialized in architecting production-ready backend logic and integrating Generative AI microservices using Node.js, Python, and RAG architectures.
           </p>
 
           <div class="hero-actions">
@@ -112,6 +113,45 @@
               >
               <a
                 href="https://github.com/megabytis/ShopNexus"
+                target="_blank"
+                class="btn btn-secondary btn-sm"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card hover-lift">
+          <div class="project-preview">
+            <img
+              src="img/RAG_documenQnA.gif"
+              alt="RAG Document Intelligence System Demo"
+              class="project-thumbnail"
+            />
+          </div>
+          <div class="project-details">
+            <div class="project-header">
+              <h4 class="project-name">RAG Document QnA</h4>
+              <span class="project-tag">AI Microservice</span>
+            </div>
+            <p class="project-summary text-secondary">
+              A production-ready Retrieval-Augmented Generation (RAG) system
+              with hybrid search, strict grounding, and zero hallucinations.
+            </p>
+            <div class="project-tech">
+              <span>Node.js</span><span>Python</span><span>FastAPI</span
+              ><span>ChromaDB</span><span>Groq</span>
+            </div>
+            <ul class="project-outcomes text-secondary">
+              <li>Hybrid search & Cross-Encoder</li>
+              <li>Microservices decoupling</li>
+              <li>Strict hard grounding</li>
+              <li>Tested to 90% accuracy</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/megabytis/RAG-DocumentQnA"
                 target="_blank"
                 class="btn btn-secondary btn-sm"
                 >GitHub</a
@@ -269,7 +309,7 @@
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <span class="timeline-date text-secondary">Present</span>
-            <h4 class="timeline-role">Backend-Focused Full-Stack Developer</h4>
+            <h4 class="timeline-role">Backend & GenAI Developer</h4>
             <p class="timeline-place text-secondary">
               Self-Taught / Portfolio Building
             </p>
