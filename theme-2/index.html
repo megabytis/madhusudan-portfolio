@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madhusudan Bhukta | Backend & GenAI</title>
+    <meta
+      name="description"
+      content="Portfolio of Madhusudan Bhukta, Backend & GenAI Developer."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Using a technical Mono font + Inter for a clean dev aesthetic -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">mb.dev</div>
+        <div class="nav-links">
+          <a href="mailto:madhusudanbhukta.dev@gmail.com" class="nav-btn">Get in touch</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Bento Grid -->
+    <main class="bento-container">
+      
+      <!-- 1. Hero Box (Spans 2 columns) -->
+      <article class="bento-box hero-box">
+        <div class="hero-content">
+          <p class="mono-label">Hi, I am</p>
+          <h1 class="hero-title">Madhusudan Bhukta</h1>
+          <h2 class="hero-subtitle">Backend & GenAI Developer</h2>
+          <p class="hero-desc">
+            I architect production-ready backend systems and integrate Generative AI microservices using Node.js, Python, and RAG architectures.
+          </p>
+          <div class="hero-actions">
+            <a href="../assets/madhusudan-bhukta-resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
+            <a href="https://github.com/megabytis" class="btn btn-secondary" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/madhusudan-bhukta/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. 3D Tech Globe Box -->
+      <article class="bento-box globe-box">
+        <div class="globe-header">
+          <span class="mono-label">Global Scale APIs</span>
+        </div>
+        <!-- This container is where Three.js will render -->
+        <div id="three-widget" class="widget-container"></div>
+      </article>
+
+      <!-- 3. Tech Stack Box -->
+      <article class="bento-box stack-box">
+        <h3 class="box-title">Core Stack</h3>
+        <div class="stack-grid">
+          <span class="stack-tag">Node.js</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Express</span>
+          <span class="stack-tag">FastAPI</span>
+          <span class="stack-tag">MongoDB</span>
+          <span class="stack-tag">Redis</span>
+          <span class="stack-tag">ChromaDB</span>
+          <span class="stack-tag">REST APIs</span>
+          <span class="stack-tag">OpenAI</span>
+          <span class="stack-tag">Groq</span>
+          <span class="stack-tag">React</span>
+        </div>
+      </article>
+
+      <!-- 4. Project 1 -->
+      <article class="bento-box project-box">
+        <div class="project-content">
+          <div class="project-header">
+            <span class="mono-label">AI Microservice</span>
+            <div class="project-links">
+              <a href="https://github.com/megabytis/RAG-DocumentQnA" target="_blank" class="icon-link">↗</a>
+            </div>
+          </div>
+          <h3 class="box-title">RAG Document QnA</h3>
+          <p class="project-desc">Production-ready RAG system with hybrid search, strict grounding, and zero hallucinations.</p>
+          <div class="tech-row">
+            <span>FastAPI</span><span>ChromaDB</span><span>Groq</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Project 2 -->
+      <article class="bento-box project-box">
+        <div class="project-content">
+          <div class="project-header">
+            <span class="mono-label">E-commerce Platform</span>
+            <div class="project-links">
+              <a href="https://shop-nexus-beta.vercel.app/" target="_blank" class="icon-link">↗</a>
+            </div>
+          </div>
+          <h3 class="box-title">ShopNexus</h3>
+          <p class="project-desc">Full-stack platform with secure auth, backend cart syncing, and full order pipeline.</p>
+          <div class="tech-row">
+            <span>Node.js</span><span>Express</span><span>MongoDB</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6. Project 3 -->
+      <article class="bento-box project-box">
+        <div class="project-content">
+          <div class="project-header">
+            <span class="mono-label">LMS Platform</span>
+            <div class="project-links">
+              <a href="https://learn-sphere-neon.vercel.app/" target="_blank" class="icon-link">↗</a>
+            </div>
+          </div>
+          <h3 class="box-title">LearnSphere</h3>
+          <p class="project-desc">Learning Management System with multi-role auth, course logic, and Stripe payments.</p>
+          <div class="tech-row">
+            <span>React</span><span>Node.js</span><span>Stripe</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7. Journey Box -->
+      <article class="bento-box journey-box">
+        <h3 class="box-title">Current Focus</h3>
+        <ul class="journey-list">
+          <li>
+            <span class="journey-dot"></span>
+            <strong>Backend & GenAI Dev</strong><br/>
+            Building highly scalable architectures & AI wrappers.
+          </li>
+          <li>
+            <span class="journey-dot"></span>
+            <strong>BCA Student</strong><br/>
+            NIIS Institute, Bhubaneswar.
+          </li>
+          <li>
+            <span class="journey-dot"></span>
+            <strong>System Design</strong><br/>
+            Studying database normalization & API security.
+          </li>
+        </ul>
+      </article>
+
+    </main>
+
+    <!-- Three.js dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="three-bg.js"></script>
+  
+
+    
+
+
+    
+        
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    <!-- Theme Switcher & CSS injected via script -->
+    <style>
+      .theme-switcher {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 9999;
+        font-family: 'Inter', sans-serif;
+      }
+      .switcher-toggle {
+        background: #111;
+        color: #fff;
+        border: 1px solid #333;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .switcher-toggle:hover {
+        background: #333;
+      }
+      .switcher-menu {
+        position: absolute;
+        bottom: calc(100% + 0.5rem);
+        left: 0;
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 250px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: all 0.3s;
+      }
+      .switcher-menu::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background: transparent;
+      }
+      .theme-switcher:hover .switcher-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .switcher-menu a {
+        text-decoration: none;
+        color: #aaa;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .switcher-menu a:hover {
+        background: #333;
+        color: #fff;
+      }
+      .switcher-menu a.active-theme {
+        color: #fff;
+        font-weight: bold;
+        border-left: 2px solid #fff;
+      }
+    </style>
+
+
+    <div class="theme-switcher">
+      <button class="switcher-toggle">🔄 Change Dimensions</button>
+      <div class="switcher-menu">
+        <a href="../index.html" class="">1. Paper Sketchbook</a>
+        <a href="../theme-4/index.html" class="">2. Interactive Neural Graph</a>
+        <a href="../theme-5/index.html" class="">3. The 3D Solar System</a>
+        <a href="#" class="active-theme">4. The Bento Grid UI</a>
+        <a href="../theme-1/index.html" class="">5. Legacy 3D Space</a>
+      </div>
+    </div>
+    
+  </body>
+</html>

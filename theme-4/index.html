@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madhusudan Bhukta | Neural Graph</title>
+    <meta name="description" content="Portfolio of Madhusudan Bhukta, Backend & GenAI Developer." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Full-screen interactive physics graph -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Overlay UI HUD -->
+    <div class="hud-wrapper">
+      
+      <nav class="hud-navbar">
+        <div class="nav-brand">M.BHUKTA <span class="blink">_</span></div>
+        <div class="nav-links">
+          <a href="../assets/madhusudan-bhukta-resume.pdf" class="hud-btn" target="_blank">INIT_RESUME</a>
+          <a href="https://github.com/megabytis" class="hud-btn" target="_blank">GITHUB</a>
+        </div>
+      </nav>
+
+      <div class="hud-main">
+        <div class="hud-panel intro-panel">
+          <h1 class="hud-title">GEN_AI &<br/>BACKEND ARCHITECT</h1>
+          <p class="hud-subtitle">
+            System initialization complete. Welcome to my interactive neural space. 
+            <br/><br/>
+            <strong>Instructions:</strong> Grab, drag, and throw the nodes in the background to explore the architecture of my skills and projects.
+          </p>
+          <a href="mailto:madhusudanbhukta.dev@gmail.com" class="hud-btn primary">CONNECT_TCP</a>
+        </div>
+        
+        <div class="hud-panel project-panel">
+          <h2 class="panel-header">// LATEST_DEPLOYMENTS</h2>
+          <div class="project-item">
+            <h3>RAG Document QnA</h3>
+            <p>Hybrid search vector pipeline ensuring zero hallucinations.</p>
+            <a href="https://github.com/megabytis/RAG-DocumentQnA" target="_blank">VIEW_SOURCE</a>
+          </div>
+          <div class="project-item">
+            <h3>ShopNexus</h3>
+            <p>Full-stack e-commerce with secure auth & cart syncing.</p>
+            <a href="https://shop-nexus-beta.vercel.app/" target="_blank">VIEW_DEMO</a>
+          </div>
+          <div class="project-item">
+            <h3>LearnSphere</h3>
+            <p>Multi-role LMS integrated with Stripe payments.</p>
+            <a href="https://github.com/megabytis/LearnSphere" target="_blank">VIEW_SOURCE</a>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="hud-footer">
+        <div class="status-bar">
+          <span class="status-indicator"></span> STATUS: ONLINE | <span id="node-count">0</span> NODES ACTIVE
+        </div>
+      </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="neural-graph.js"></script>
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
+  
+
+    <!-- Theme Switcher & CSS injected via script -->
+    <style>
+      .theme-switcher {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 9999;
+        font-family: 'Inter', sans-serif;
+      }
+      .switcher-toggle {
+        background: #111;
+        color: #fff;
+        border: 1px solid #333;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .switcher-toggle:hover {
+        background: #333;
+      }
+      .switcher-menu {
+        position: absolute;
+        bottom: calc(100% + 0.5rem);
+        left: 0;
+        background: #111;
+        border: 1px solid #333;
+        border-radius: 8px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 250px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: all 0.3s;
+      }
+      .switcher-menu::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background: transparent;
+      }
+      .theme-switcher:hover .switcher-menu {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .switcher-menu a {
+        text-decoration: none;
+        color: #aaa;
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .switcher-menu a:hover {
+        background: #333;
+        color: #fff;
+      }
+      .switcher-menu a.active-theme {
+        color: #fff;
+        font-weight: bold;
+        border-left: 2px solid #fff;
+      }
+    </style>
+
+
+    <div class="theme-switcher">
+      <button class="switcher-toggle">🔄 Change Dimensions</button>
+      <div class="switcher-menu">
+        <a href="../index.html" class="">1. Paper Sketchbook</a>
+        <a href="#" class="active-theme">2. Interactive Neural Graph</a>
+        <a href="../theme-5/index.html" class="">3. The 3D Solar System</a>
+        <a href="../theme-2/index.html" class="">4. The Bento Grid UI</a>
+        <a href="../theme-1/index.html" class="">5. Legacy 3D Space</a>
+      </div>
+    </div>
+    
+  </body>
+</html>

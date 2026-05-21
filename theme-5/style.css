@@ -1,0 +1,257 @@
+:root {
+  --bg-space: #020205; /* Incredibly deep blue/black */
+  --text-main: #ffffff;
+  --text-muted: #8892b0;
+  
+  --accent-blue: #64ffda;
+  --accent-purple: #b392f0;
+  
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-space);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  /* Allow scrolling on body, but it's just driving the camera */
+}
+
+/* Three.js Canvas */
+#three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none; /* Let clicks pass to UI */
+}
+
+/* Scroll Track (Provides the scroll height) */
+.scroll-track {
+  position: relative; /* Forces the body to be this tall */
+  width: 100%;
+  height: 500vh; /* 5 sections, 100vh each */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* UI Layer */
+.ui-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  pointer-events: none; /* Only buttons should be clickable */
+}
+
+/* UI Sections */
+.ui-section {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Left aligned */
+  transform: translateY(-50%);
+  width: 80%;
+  max-width: 600px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+  pointer-events: none;
+}
+
+.ui-section.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%); /* Restoring transform */
+  pointer-events: auto; /* Allow clicking links inside active section */
+}
+
+/* Push active section slightly forward for a parallax feel */
+.ui-section:not(.active) {
+  transform: translateY(-40%);
+}
+
+/* Section 0: Center Aligned */
+#sec-0 {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#sec-0.active {
+  transform: translate(-50%, -50%);
+}
+#sec-0:not(.active) {
+  transform: translate(-50%, -60%);
+}
+
+#sec-4 {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 800px;
+}
+#sec-4.active {
+  transform: translate(-50%, -50%);
+}
+#sec-4:not(.active) {
+  transform: translate(-50%, -40%);
+}
+
+/* Typography */
+.stellar-title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.stellar-subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-blue);
+  letter-spacing: 0.2em;
+  margin-bottom: 1.5rem;
+}
+
+.stellar-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.planet-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.planet-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.planet-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.planet-tech span {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  color: var(--accent-blue);
+}
+
+/* Skills Universe */
+.skills-universe {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.skill-cloud {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  flex: 1;
+  min-width: 200px;
+}
+
+.skill-cloud h4 {
+  color: var(--accent-purple);
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.skill-cloud p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.hero-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.glass-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 0.8rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  pointer-events: auto; /* Clickable */
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+.glass-btn.primary {
+  background: #fff;
+  color: #000;
+}
+.glass-btn.primary:hover {
+  background: #eee;
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+/* Scroll Progress */
+.scroll-progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 100;
+}
+
+.scroll-progress {
+  height: 100%;
+  width: 0%;
+  background: var(--accent-blue);
+  box-shadow: 0 0 10px var(--accent-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ui-section {
+    left: 5%;
+    width: 90%;
+  }
+}
