@@ -11,7 +11,7 @@ const { execSync } = require('child_process');
 // 'theme-3' (Paper Sketchbook - Gamified)
 // 'theme-4' (Interactive Neural Graph)
 // 'theme-5' (The 3D Solar System)
-const PRIMARY_THEME = 'theme-3'; 
+const PRIMARY_THEME = 'theme-1'; 
 // ==========================================
 
 console.log('\n🚀 Switching primary theme to: ' + PRIMARY_THEME + '...\n');
