@@ -53,13 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // 0. The Central Sun (Madhusudan)
     createPlanet(8, 0xffffff, 0, 0, 0, 0.002);
 
-    // 1. Planet: RAG QnA
+    // 1. Planet: Project KYH (FLAGSHIP)
     createPlanet(4, 0x64ffda, 15, 0, -30, 0.005);
 
     // 2. Planet: ShopNexus
     createPlanet(5, 0xb392f0, -18, -5, -60, -0.004);
 
-    // 3. Planet: LearnSphere
+    // 3. Planet: RAG-DocumentQnA
     createPlanet(3.5, 0x64ffda, 12, 8, -90, 0.006);
     
     // 4. Massive distant structure (Skills)

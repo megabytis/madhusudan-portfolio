@@ -15,28 +15,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Graph Data Structure
     const nodes = [
         { id: 'Me', label: 'Madhusudan', color: '#00f0ff', radius: 30, mass: 2 },
-        { id: 'Node', label: 'Node.js', color: '#39ff14', radius: 20, mass: 1 },
-        { id: 'Py', label: 'Python', color: '#b026ff', radius: 20, mass: 1 },
-        { id: 'API', label: 'REST APIs', color: '#39ff14', radius: 15, mass: 0.8 },
-        { id: 'Fast', label: 'FastAPI', color: '#b026ff', radius: 15, mass: 0.8 },
-        { id: 'DB', label: 'MongoDB', color: '#39ff14', radius: 15, mass: 0.8 },
-        { id: 'GenAI', label: 'GenAI', color: '#00f0ff', radius: 25, mass: 1.5 },
-        { id: 'RAG', label: 'RAG Pipeline', color: '#b026ff', radius: 18, mass: 1 },
-        { id: 'Chroma', label: 'ChromaDB', color: '#b026ff', radius: 15, mass: 0.8 },
-        { id: 'LLM', label: 'Groq / OpenAI', color: '#00f0ff', radius: 15, mass: 0.8 }
+        { id: 'Deta', label: 'Detagenix (Intern)', color: '#ff0055', radius: 22, mass: 1.2 },
+        { id: 'KYH', label: 'Project KYH (Flagship)', color: '#00f0ff', radius: 22, mass: 1.2 },
+        { id: 'Shop', label: 'ShopNexus (k6)', color: '#39ff14', radius: 18, mass: 1 },
+        { id: 'RAG', label: 'RAG-DocumentQnA', color: '#b026ff', radius: 18, mass: 1 },
+        { id: 'Node', label: 'Node.js / Express', color: '#39ff14', radius: 20, mass: 1 },
+        { id: 'Py', label: 'Python / FastAPI', color: '#b026ff', radius: 20, mass: 1 },
+        { id: 'AWS', label: 'AWS EC2 & Docker', color: '#ff9900', radius: 18, mass: 1 },
+        { id: 'DB', label: 'MongoDB & Redis', color: '#39ff14', radius: 16, mass: 0.8 },
+        { id: 'Graph', label: 'LangGraph', color: '#00f0ff', radius: 16, mass: 0.8 }
     ];
 
     const links = [
-        { source: 'Me', target: 'Node' },
-        { source: 'Me', target: 'Py' },
-        { source: 'Me', target: 'GenAI' },
-        { source: 'Node', target: 'API' },
-        { source: 'Node', target: 'DB' },
-        { source: 'Py', target: 'Fast' },
-        { source: 'GenAI', target: 'RAG' },
-        { source: 'GenAI', target: 'LLM' },
-        { source: 'RAG', target: 'Chroma' },
-        { source: 'RAG', target: 'Py' }
+        { source: 'Me', target: 'Deta' },
+        { source: 'Me', target: 'KYH' },
+        { source: 'Me', target: 'Shop' },
+        { source: 'Me', target: 'RAG' },
+        { source: 'KYH', target: 'Graph' },
+        { source: 'KYH', target: 'AWS' },
+        { source: 'KYH', target: 'Py' },
+        { source: 'KYH', target: 'Node' },
+        { source: 'Shop', target: 'Node' },
+        { source: 'Shop', target: 'DB' },
+        { source: 'RAG', target: 'Py' },
+        { source: 'Deta', target: 'Node' },
+        { source: 'Deta', target: 'Py' }
     ];
 
     // Initialize node positions and velocities

@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Typewriter effect
-    const phrases = ["Backend Developer", "GenAI Enthusiast", "System Architect"];
+    const phrases = ["Backend Engineer", "AI Systems Architecture", "Node.js & Python Specialist"];
     let currentPhraseIndex = 0;
     let isDeleting = false;
     let text = "";

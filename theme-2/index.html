@@ -36,14 +36,14 @@
         <div class="hero-content">
           <p class="mono-label">Hi, I am</p>
           <h1 class="hero-title">Madhusudan Bhukta</h1>
-          <h2 class="hero-subtitle">Backend & GenAI Developer</h2>
+          <h2 class="hero-subtitle">Backend Engineer | Node.js & AI Systems Architecture</h2>
           <p class="hero-desc">
-            I architect production-ready backend systems and integrate Generative AI microservices using Node.js, Python, and RAG architectures.
+            Backend engineer with hands-on production experience building REST APIs, integrating AI/ML services into Node.js systems, and optimizing database and caching layers. Currently shipping features in a live CRM/HRM platform serving hundreds of active users. Deployed AI services to AWS using Docker, custom domains, and SSL certificates.
           </p>
           <div class="hero-actions">
-            <a href="../assets/madhusudan-bhukta-resume.pdf" class="btn btn-primary" target="_blank">View Resume</a>
-            <a href="https://github.com/megabytis" class="btn btn-secondary" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/madhusudan-bhukta/" class="btn btn-secondary" target="_blank">LinkedIn</a>
+            <a href="../assets/madhusudan-bhukta-resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Resume</a>
+            <a href="https://github.com/megabytis" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/madhusudan-bhukta/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
         </div>
       </article>
@@ -63,31 +63,34 @@
         <div class="stack-grid">
           <span class="stack-tag">Node.js</span>
           <span class="stack-tag">Python</span>
-          <span class="stack-tag">Express</span>
+          <span class="stack-tag">SQL</span>
+          <span class="stack-tag">Express.js</span>
           <span class="stack-tag">FastAPI</span>
           <span class="stack-tag">MongoDB</span>
           <span class="stack-tag">Redis</span>
           <span class="stack-tag">ChromaDB</span>
-          <span class="stack-tag">REST APIs</span>
-          <span class="stack-tag">OpenAI</span>
-          <span class="stack-tag">Groq</span>
-          <span class="stack-tag">React</span>
+          <span class="stack-tag">RAG Pipelines</span>
+          <span class="stack-tag">Hybrid Search</span>
+          <span class="stack-tag">AWS (EC2)</span>
+          <span class="stack-tag">Docker</span>
+          <span class="stack-tag">k6</span>
         </div>
       </article>
 
-      <!-- 4. Project 1 -->
+      <!-- 4. Project 1 (FLAGSHIP) -->
       <article class="bento-box project-box">
         <div class="project-content">
           <div class="project-header">
-            <span class="mono-label">AI Microservice</span>
+            <span class="mono-label">FLAGSHIP — AI Fitness Agent</span>
             <div class="project-links">
-              <a href="https://github.com/megabytis/RAG-DocumentQnA" target="_blank" class="icon-link">↗</a>
+              <a href="https://kyh.bhuktatech.in/" target="_blank" rel="noopener noreferrer" class="icon-link" title="Live Demo">🌐</a>
+              <a href="https://github.com/megabytis/project-kyh" target="_blank" rel="noopener noreferrer" class="icon-link" title="Source Code">↗</a>
             </div>
           </div>
-          <h3 class="box-title">RAG Document QnA</h3>
-          <p class="project-desc">Production-ready RAG system with hybrid search, strict grounding, and zero hallucinations.</p>
+          <h3 class="box-title">Project KYH</h3>
+          <p class="project-desc">Async multi-agent health coach using LangGraph (7 nodes), microservices containerized via Docker Compose on AWS EC2.</p>
           <div class="tech-row">
-            <span>FastAPI</span><span>ChromaDB</span><span>Groq</span>
+            <span>Python</span><span>LangGraph</span><span>AWS EC2</span><span>Docker</span>
           </div>
         </div>
       </article>
@@ -96,15 +99,16 @@
       <article class="bento-box project-box">
         <div class="project-content">
           <div class="project-header">
-            <span class="mono-label">E-commerce Platform</span>
+            <span class="mono-label">Full-Stack E-Commerce</span>
             <div class="project-links">
-              <a href="https://shop-nexus-beta.vercel.app/" target="_blank" class="icon-link">↗</a>
+              <a href="https://shop-nexus-beta.vercel.app" target="_blank" rel="noopener noreferrer" class="icon-link" title="Live Demo">🌐</a>
+              <a href="https://github.com/megabytis/shopnexus" target="_blank" rel="noopener noreferrer" class="icon-link" title="Source Code">↗</a>
             </div>
           </div>
           <h3 class="box-title">ShopNexus</h3>
-          <p class="project-desc">Full-stack platform with secure auth, backend cart syncing, and full order pipeline.</p>
+          <p class="project-desc">High-concurrency backend load tested with k6 (3,100+ reqs @ 50 VUs). Features Stripe lifecycle & JWT token rotation.</p>
           <div class="tech-row">
-            <span>Node.js</span><span>Express</span><span>MongoDB</span>
+            <span>Node.js</span><span>Redis</span><span>Stripe</span><span>k6</span>
           </div>
         </div>
       </article>
@@ -113,37 +117,34 @@
       <article class="bento-box project-box">
         <div class="project-content">
           <div class="project-header">
-            <span class="mono-label">LMS Platform</span>
+            <span class="mono-label">AI Document Search</span>
             <div class="project-links">
-              <a href="https://learn-sphere-neon.vercel.app/" target="_blank" class="icon-link">↗</a>
+              <a href="https://github.com/megabytis/RAG-DocumentQnA" target="_blank" rel="noopener noreferrer" class="icon-link" title="Source Code">↗</a>
             </div>
           </div>
-          <h3 class="box-title">LearnSphere</h3>
-          <p class="project-desc">Learning Management System with multi-role auth, course logic, and Stripe payments.</p>
+          <h3 class="box-title">RAG-DocumentQnA</h3>
+          <p class="project-desc">Dual-service Node.js/Python architecture with Hybrid Search (BM25 + Dense) and Cross-Encoder re-ranker.</p>
           <div class="tech-row">
-            <span>React</span><span>Node.js</span><span>Stripe</span>
+            <span>Node.js</span><span>Python</span><span>ChromaDB</span><span>LangChain</span>
           </div>
         </div>
       </article>
 
-      <!-- 7. Journey Box -->
+      <!-- 7. Experience & Journey Box -->
       <article class="bento-box journey-box">
-        <h3 class="box-title">Current Focus</h3>
+        <h3 class="box-title">Experience & Education</h3>
         <ul class="journey-list">
           <li>
             <span class="journey-dot"></span>
-            <strong>Backend & GenAI Dev</strong><br/>
-            Building highly scalable architectures & AI wrappers.
+            <strong>Backend Developer Intern</strong><br/>
+            Detagenix Pvt. Ltd. (May 2026 – Aug 2026)<br/>
+            <small>Shipped 26+ endpoints, sub-180ms AI contracts.</small>
           </li>
           <li>
             <span class="journey-dot"></span>
-            <strong>BCA Student</strong><br/>
-            NIIS Institute, Bhubaneswar.
-          </li>
-          <li>
-            <span class="journey-dot"></span>
-            <strong>System Design</strong><br/>
-            Studying database normalization & API security.
+            <strong>BCA Student (2024–2027)</strong><br/>
+            NIIS Institute, Bhubaneswar.<br/>
+            <small>CGPA: 8.1 (1st Sem)</small>
           </li>
         </ul>
       </article>
@@ -160,6 +161,20 @@
 
     
         
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
   
 
     

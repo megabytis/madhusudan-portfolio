@@ -58,11 +58,11 @@
           <h1 class="hero-name">Madhusudan Bhukta</h1>
           <h2 class="hero-role"><span id="typewriter"></span><span class="type-cursor">|</span></h2>
           <p class="hero-subline text-secondary">
-            Building scalable APIs and AI-powered systems. Specialized in architecting production-ready backend logic and integrating Generative AI microservices using Node.js, Python, and RAG architectures.
+            Backend engineer with hands-on production experience building REST APIs, integrating AI/ML services into Node.js systems, and optimizing database and caching layers. Currently shipping features in a live CRM/HRM platform serving hundreds of active users. Deployed AI services to AWS using Docker, custom domains, and SSL certificates.
           </p>
 
           <div class="hero-actions">
-            <a href="./assets/madhusudan-bhukta-resume.pdf" class="btn btn-primary"
+            <a href="./assets/madhusudan-bhukta-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary"
               >Resume</a
             >
             <a
@@ -79,44 +79,43 @@
     <section class="container projects-section fade-in-section" id="projects">
       <h3 class="section-title">Selected Work</h3>
       <div class="projects-list">
-        <!-- Project 1 -->
+        <!-- Project 1 (FLAGSHIP) -->
         <article class="project-card hover-lift">
           <div class="project-preview">
             <img
-              src="img/shopnexus-ui.png"
-              alt="ShopNexus E-commerce Platform UI"
+              src="img/project-kyh-ui.png"
+              alt="Project KYH - AI Fitness Agent UI"
               class="project-thumbnail"
             />
           </div>
           <div class="project-details">
             <div class="project-header">
-              <h4 class="project-name">ShopNexus</h4>
-              <span class="project-tag">E-commerce Platform</span>
+              <h4 class="project-name">Project KYH — AI Fitness Agent</h4>
+              <span class="project-tag">Flagship Project</span>
             </div>
             <p class="project-summary text-secondary">
-              A full-stack e-commerce platform with secure authentication,
-              product management, cart syncing, and order pipeline logic.
+              Asynchronous multi-agent health coach utilizing LangGraph, orchestrating 7 graph nodes and microservices deployed on AWS EC2.
             </p>
             <div class="project-tech">
-              <span>React</span><span>Node.js</span><span>Express</span
-              ><span>MongoDB</span><span>Redis</span>
+              <span>Python</span><span>LangGraph</span><span>Node.js</span><span>Docker Compose</span><span>AWS EC2</span><span>MongoDB</span>
             </div>
             <ul class="project-outcomes text-secondary">
-              <li>Secure HTTP-only cookie auth</li>
-              <li>Pagination, filtering, search</li>
-              <li>Backend-driven cart syncing</li>
-              <li>Full order pipeline with admin flows</li>
+              <li>Architected an asynchronous multi-agent health coach utilizing LangGraph, orchestrating 7 discrete graph nodes and conditional subgraphs to decouple intake tracking from macro planning logic.</li>
+              <li>Containerized and orchestrated split Node.js and Python microservices alongside persistent state layers via Docker Compose, deploying the multi-runtime system onto a dedicated AWS EC2 cloud instance.</li>
+              <li>Implemented multi-day user session persistence using LangGraph checkpointing synced with MongoDB Atlas to track and evaluate dietary behavior trends across a 30-day window.</li>
             </ul>
             <div class="project-links">
               <a
-                href="https://shop-nexus-beta.vercel.app/"
+                href="https://kyh.bhuktatech.in/"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-secondary btn-sm"
                 >Live Demo</a
               >
               <a
-                href="https://github.com/megabytis/ShopNexus"
+                href="https://github.com/megabytis/project-kyh"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-secondary btn-sm"
                 >GitHub</a
               >
@@ -128,34 +127,39 @@
         <article class="project-card hover-lift">
           <div class="project-preview">
             <img
-              src="img/RAG_documenQnA.gif"
-              alt="RAG Document Intelligence System Demo"
+              src="img/shopnexus-ui.png"
+              alt="ShopNexus E-commerce Platform UI"
               class="project-thumbnail"
             />
           </div>
           <div class="project-details">
             <div class="project-header">
-              <h4 class="project-name">RAG Document QnA</h4>
-              <span class="project-tag">AI Microservice</span>
+              <h4 class="project-name">ShopNexus — E-Commerce Platform</h4>
+              <span class="project-tag">Full-Stack E-Commerce</span>
             </div>
             <p class="project-summary text-secondary">
-              A production-ready Retrieval-Augmented Generation (RAG) system
-              with hybrid search, strict grounding, and zero hallucinations.
+              High-concurrency backend system profiled under micro-burst concurrency with Stripe payment lifecycle and RBAC.
             </p>
             <div class="project-tech">
-              <span>Node.js</span><span>Python</span><span>FastAPI</span
-              ><span>ChromaDB</span><span>Groq</span>
+              <span>Node.js</span><span>Express</span><span>MongoDB</span><span>Redis</span><span>Stripe</span><span>k6</span>
             </div>
             <ul class="project-outcomes text-secondary">
-              <li>Hybrid search & Cross-Encoder</li>
-              <li>Microservices decoupling</li>
-              <li>Strict hard grounding</li>
-              <li>Tested to 90% accuracy</li>
+              <li>Profiled live deployment thresholds under micro-burst concurrency using k6, pushing 3,100+ requests at a peak of 50 concurrent virtual users to systematically locate database bottlenecks and infrastructure compute constraints.</li>
+              <li>Built complete Stripe payment lifecycle (checkout, webhooks, refunds) with idempotency handling and 12+ domain-driven MongoDB models.</li>
+              <li>Implemented JWT auth with refresh token rotation, RBAC middleware, and rate limiting to protect 25+ API routes.</li>
             </ul>
             <div class="project-links">
               <a
-                href="https://github.com/megabytis/RAG-DocumentQnA"
+                href="https://shop-nexus-beta.vercel.app"
                 target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm"
+                >Live Demo</a
+              >
+              <a
+                href="https://github.com/megabytis/shopnexus"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-secondary btn-sm"
                 >GitHub</a
               >
@@ -167,85 +171,31 @@
         <article class="project-card hover-lift">
           <div class="project-preview">
             <img
-              src="img/learnsphere-ui.png"
-              alt="LearnSphere Learning Management System UI"
+              src="img/RAG_documenQnA.gif"
+              alt="RAG Document Intelligence System Demo"
               class="project-thumbnail"
             />
           </div>
           <div class="project-details">
             <div class="project-header">
-              <h4 class="project-name">LearnSphere</h4>
-              <span class="project-tag">Learning Platform</span>
+              <h4 class="project-name">RAG-DocumentQnA — AI Document Search</h4>
+              <span class="project-tag">AI Document Search</span>
             </div>
             <p class="project-summary text-secondary">
-              A full-stack Learning Management System with user roles, course
-              management, lesson content, and payment integration.
+              Dual-service architecture supporting multi-format document parsing with Hybrid Search and Cross-Encoder re-ranking.
             </p>
             <div class="project-tech">
-              <span>React</span><span>Node.js</span><span>Express</span
-              ><span>MongoDB</span><span>Stripe</span>
+              <span>Node.js</span><span>Python</span><span>ChromaDB</span><span>LangChain</span>
             </div>
             <ul class="project-outcomes text-secondary">
-              <li>Multi-role authentication system</li>
-              <li>Course and lesson management</li>
-              <li>Payment integration with Stripe</li>
-              <li>Responsive UI with modern design</li>
+              <li>Built dual-service architecture (Node.js API gateway + Python AI backend) supporting PDF, TXT, and DOCX parsing with per-user session isolation.</li>
+              <li>Reduced LLM hallucinations by implementing Hybrid Search (Dense embeddings + BM25) with a Cross-Encoder re-ranker, improving retrieval precision across 3 document types.</li>
             </ul>
             <div class="project-links">
               <a
-                href="https://learn-sphere-neon.vercel.app/"
+                href="https://github.com/megabytis/RAG-DocumentQnA"
                 target="_blank"
-                class="btn btn-secondary btn-sm"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/megabytis/LearnSphere"
-                target="_blank"
-                class="btn btn-secondary btn-sm"
-                >GitHub</a
-              >
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="project-card hover-lift">
-          <div class="project-preview">
-            <img
-              src="img/devtinder-ui.png"
-              alt="Devtinder Developer Matching Platform UI"
-              class="project-thumbnail"
-            />
-          </div>
-          <div class="project-details">
-            <div class="project-header">
-              <h4 class="project-name">Devtinder</h4>
-              <span class="project-tag">Social Platform</span>
-            </div>
-            <p class="project-summary text-secondary">
-              A developer matchmaking platform inspired by Tinder but tailored
-              for devs.
-            </p>
-            <div class="project-tech">
-              <span>Node.js</span><span>Express</span><span>MongoDB</span
-              ><span>Socket.io</span>
-            </div>
-            <ul class="project-outcomes text-secondary">
-              <li>Secure auth & Profile creation</li>
-              <li>Matching system logic</li>
-              <li>CORS + state debugging solved</li>
-              <li>Deployed on Vercel + Render</li>
-            </ul>
-            <div class="project-links">
-              <a
-                href="https://dev-tinder-web-app-gray.vercel.app/"
-                target="_blank"
-                class="btn btn-secondary btn-sm"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/megabytis/devTinder-WebApp"
-                target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-secondary btn-sm"
                 >GitHub</a
               >
@@ -256,91 +206,94 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="container skills-section fade-in-section">
+    <section class="container skills-section fade-in-section" id="skills">
       <h3 class="section-title">Tech Stack</h3>
       <div class="skills-wrapper">
         <div class="skills-marquee marquee-left">
           <div class="skills-content">
-            <span class="skill-pill hover-lift">JavaScript</span>
+            <span class="skill-pill hover-lift">JavaScript (ES6+)</span>
+            <span class="skill-pill hover-lift">Python</span>
+            <span class="skill-pill hover-lift">SQL</span>
             <span class="skill-pill hover-lift">Node.js</span>
             <span class="skill-pill hover-lift">Express.js</span>
+            <span class="skill-pill hover-lift">FastAPI</span>
+            <span class="skill-pill hover-lift">REST API Design</span>
             <span class="skill-pill hover-lift">MongoDB</span>
-            <span class="skill-pill hover-lift">REST APIs</span>
-            <span class="skill-pill hover-lift">Authentication</span>
-            <span class="skill-pill hover-lift">Git</span>
-            <span class="skill-pill hover-lift">GitHub</span>
+            <span class="skill-pill hover-lift">Redis</span>
+            <span class="skill-pill hover-lift">ChromaDB</span>
             <!-- Duplicate for seamless loop -->
-            <span class="skill-pill hover-lift">JavaScript</span>
+            <span class="skill-pill hover-lift">JavaScript (ES6+)</span>
+            <span class="skill-pill hover-lift">Python</span>
+            <span class="skill-pill hover-lift">SQL</span>
             <span class="skill-pill hover-lift">Node.js</span>
             <span class="skill-pill hover-lift">Express.js</span>
+            <span class="skill-pill hover-lift">FastAPI</span>
+            <span class="skill-pill hover-lift">REST API Design</span>
             <span class="skill-pill hover-lift">MongoDB</span>
-            <span class="skill-pill hover-lift">REST APIs</span>
-            <span class="skill-pill hover-lift">Authentication</span>
-            <span class="skill-pill hover-lift">Git</span>
-            <span class="skill-pill hover-lift">GitHub</span>
+            <span class="skill-pill hover-lift">Redis</span>
+            <span class="skill-pill hover-lift">ChromaDB</span>
           </div>
         </div>
         <div class="skills-marquee marquee-right">
           <div class="skills-content">
-            <span class="skill-pill hover-lift">Postman</span>
-            <span class="skill-pill hover-lift">Render</span>
-            <span class="skill-pill hover-lift">Vercel</span>
-            <span class="skill-pill hover-lift">VS Code</span>
-            <span class="skill-pill hover-lift">Thunder Client</span>
-            <span class="skill-pill hover-lift">Python</span>
-            <span class="skill-pill hover-lift">OpenAI API</span>
-            <span class="skill-pill hover-lift">Debugging</span>
+            <span class="skill-pill hover-lift">RAG Pipelines</span>
+            <span class="skill-pill hover-lift">Hybrid Search</span>
+            <span class="skill-pill hover-lift">Vector Databases</span>
+            <span class="skill-pill hover-lift">JWT & RBAC</span>
+            <span class="skill-pill hover-lift">Redis Caching</span>
+            <span class="skill-pill hover-lift">Rate Limiting</span>
+            <span class="skill-pill hover-lift">AWS (EC2)</span>
+            <span class="skill-pill hover-lift">Docker & Compose</span>
+            <span class="skill-pill hover-lift">Nginx & SSL</span>
+            <span class="skill-pill hover-lift">Git & Vercel</span>
             <!-- Duplicate for seamless loop -->
-            <span class="skill-pill hover-lift">Postman</span>
-            <span class="skill-pill hover-lift">Render</span>
-            <span class="skill-pill hover-lift">Vercel</span>
-            <span class="skill-pill hover-lift">VS Code</span>
-            <span class="skill-pill hover-lift">Thunder Client</span>
-            <span class="skill-pill hover-lift">Python</span>
-            <span class="skill-pill hover-lift">OpenAI API</span>
-            <span class="skill-pill hover-lift">Debugging</span>
+            <span class="skill-pill hover-lift">RAG Pipelines</span>
+            <span class="skill-pill hover-lift">Hybrid Search</span>
+            <span class="skill-pill hover-lift">Vector Databases</span>
+            <span class="skill-pill hover-lift">JWT & RBAC</span>
+            <span class="skill-pill hover-lift">Redis Caching</span>
+            <span class="skill-pill hover-lift">Rate Limiting</span>
+            <span class="skill-pill hover-lift">AWS (EC2)</span>
+            <span class="skill-pill hover-lift">Docker & Compose</span>
+            <span class="skill-pill hover-lift">Nginx & SSL</span>
+            <span class="skill-pill hover-lift">Git & Vercel</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section class="container timeline-section fade-in-section">
-      <h3 class="section-title">Journey</h3>
+    <!-- Timeline & Experience Section -->
+    <section class="container timeline-section fade-in-section" id="timeline">
+      <h3 class="section-title">Experience & Journey</h3>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date text-secondary">Present</span>
-            <h4 class="timeline-role">Backend & GenAI Developer</h4>
+            <span class="timeline-date text-secondary">May 2026 – Aug 2026</span>
+            <h4 class="timeline-role">Backend Developer Intern</h4>
             <p class="timeline-place text-secondary">
-              Self-Taught / Portfolio Building
+              Detagenix Pvt. Ltd. (Remote)
             </p>
-            <p class="timeline-desc text-secondary">
-              Building production-ready full-stack applications with a focus on
-              backend architecture, security, and scalability.
-            </p>
+            <ul class="timeline-desc text-secondary" style="padding-left: 1.2rem; margin-top: 0.5rem;">
+              <li>Built and shipped 26+ REST API endpoints in a production CRM/HRM system, bridging Node.js/Express with Python FastAPI AI services for cross-service data flow.</li>
+              <li>Resolved 3+ critical production bugs across frontend-backend integration, improving API reliability and reducing error rates in live user workflows.</li>
+              <li>Designed API contracts between Node.js and FastAPI services, enabling real-time risk anomaly detection and automated report generation with sub-180ms latency.</li>
+            </ul>
           </div>
         </div>
+
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <span class="timeline-date text-secondary">Ongoing</span>
+            <span class="timeline-date text-secondary">2024 – 2027</span>
             <h4 class="timeline-role">
               Bachelor of Computer Applications (BCA)
             </h4>
             <p class="timeline-place text-secondary">
               NIIS Institute of Business Administration, Bhubaneswar, Odisha
             </p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <span class="timeline-date text-secondary">2022</span>
-            <h4 class="timeline-role">Higher Secondary (12th)</h4>
-            <p class="timeline-place text-secondary">
-              e-Tech Residential Higher Secondary School, Dhenkanal, Odisha
+            <p class="timeline-desc text-secondary">
+              Standing: CGPA 8.1 (1st Sem)
             </p>
           </div>
         </div>
@@ -408,6 +361,20 @@
 
     
         
+  
+
+    
+
+
+    
+    
+  
+
+    
+
+
+    
+    
   
 
     
