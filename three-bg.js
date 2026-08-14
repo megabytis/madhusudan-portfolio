@@ -85,8 +85,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Removed mouse parallax tracking to keep the background serene and non-disturbing
 
+    // Disable Three.js on mobile screens < 768px for optimal performance & battery
+    const checkMobile = () => {
+        if (window.innerWidth < 768) {
+            canvas.style.display = 'none';
+            return true;
+        }
+        canvas.style.display = 'block';
+        return false;
+    };
+
+    if (checkMobile()) return;
+
     // Resize handler
     window.addEventListener('resize', () => {
+        if (checkMobile()) return;
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -96,6 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const clock = new THREE.Clock();
 
     function animate() {
+        if (window.innerWidth < 768) {
+            canvas.style.display = 'none';
+            return;
+        }
         requestAnimationFrame(animate);
 
         const elapsedTime = clock.getElapsedTime();

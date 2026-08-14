@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Scroll Reveal Animation for fade-in sections
+    // Scroll Reveal Animation using vanilla IntersectionObserver
     const observerOptions = {
         root: null,
         rootMargin: "0px",
@@ -15,8 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, observerOptions);
     
-    document.querySelectorAll(".fade-in-section").forEach(section => {
-        observer.observe(section);
+    // Observe fade-in sections, hero stagger items, and timeline items
+    document.querySelectorAll(".fade-in-section, .hero-stagger, .timeline-item").forEach(el => {
+        observer.observe(el);
+    });
+
+    // Project cards staggered reveal (index * 0.1s)
+    const projectCards = document.querySelectorAll(".project-card");
+    projectCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(card);
     });
 
     // Typewriter effect
@@ -27,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let typeSpeed = 100;
     
     const typeWriterElement = document.getElementById("typewriter");
-    if(typeWriterElement) {
+    if (typeWriterElement) {
         function type() {
             const currentPhrase = phrases[currentPhraseIndex];
             
