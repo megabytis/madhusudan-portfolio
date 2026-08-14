@@ -8,7 +8,7 @@
       name="description"
       content="Portfolio of Madhusudan Bhukta, a Full Stack & Generative AI Backend Developer specializing in scalable REST APIs, LangGraph AI Agents, and high-concurrency microservices."
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=5" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,65 +44,72 @@
       </nav>
     </div>
 
-    <!-- Hero Section -->
+    <!-- EXECUTIVE HYBRID HERO SECTION -->
     <section class="container hero-section" id="about">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="status-badge hero-stagger">
-            <span class="status-dot"></span>
-            Available for Full-Time Roles & Projects
-          </div>
-          <h1 class="hero-title hero-stagger">
-            <span class="hero-title-gradient">Full Stack & GenAI</span><br />
-            Backend Developer
-          </h1>
-          <div class="hero-role-wrapper hero-stagger">
-            <span id="typewriter"></span><span class="type-cursor">|</span>
-          </div>
-          <p class="hero-description hero-stagger">
-            Backend engineer with production experience building high-performance REST APIs, orchestrating multi-agent LLM systems with LangGraph, and deploying containerized microservices to AWS cloud infrastructure.
-          </p>
+      <div class="hero-wrapper">
+        <div class="hero-grid">
+          <!-- Hero Left Column (Content) -->
+          <div class="hero-content">
+            <div class="status-badge hero-stagger">
+              <span class="status-dot"></span>
+              Available for Full-Time Roles & Projects
+            </div>
+            <h1 class="hero-title hero-stagger">
+              Hi, I'm <span class="hero-title-gradient">Madhusudan Bhukta</span>
+            </h1>
+            <h2 class="hero-role-title hero-stagger">
+              Full Stack & Generative AI Backend Developer
+            </h2>
+            <div class="hero-role-wrapper hero-stagger">
+              <span id="typewriter"></span><span class="type-cursor">|</span>
+            </div>
+            <p class="hero-description hero-stagger">
+              Backend engineer with production experience building high-performance REST APIs, orchestrating multi-agent LLM systems with LangGraph, and deploying containerized microservices to AWS cloud infrastructure.
+            </p>
 
-          <div class="hero-actions hero-stagger">
-            <a href="#projects" class="btn btn-primary">View Projects ↓</a>
-            <a
-              href="./assets/madhusudan-bhukta-resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-glow"
-              >Download Resume (PDF)</a
-            >
-            <a href="mailto:madhusudanbhukta.dev@gmail.com" class="btn btn-secondary"
-              >Email Me</a
-            >
+            <div class="hero-actions hero-stagger">
+              <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+              <a
+                href="./assets/madhusudan-bhukta-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-glow"
+                >Download Resume (PDF)</a
+              >
+              <a href="mailto:madhusudanbhukta.dev@gmail.com" class="btn btn-secondary"
+                >Email Me</a
+              >
+            </div>
           </div>
 
-          <div class="stats-row hero-stagger">
-            <div class="stat-item">
-              <span class="stat-number">26+</span>
-              <span class="stat-label">Production APIs</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">3.1k+</span>
-              <span class="stat-label">req/s Benchmark</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">7</span>
-              <span class="stat-label">Graph AI Nodes</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">8.1</span>
-              <span class="stat-label">BCA CGPA</span>
-            </div>
+          <!-- Hero Right Column (Large Executive Photo Stage) -->
+          <div class="hero-image-wrapper hero-stagger">
+            <img
+              src="img/professional-pic.jpg"
+              alt="Madhusudan Bhukta's professional headshot"
+              class="hero-img"
+            />
           </div>
         </div>
 
-        <div class="hero-image-wrapper hero-stagger">
-          <img
-            src="img/professional-pic.jpg"
-            alt="Madhusudan Bhukta's professional headshot"
-            class="hero-img"
-          />
+        <!-- 4-Card Quick Stats Bento Bar -->
+        <div class="hero-stats-bar hero-stagger">
+          <div class="hero-stat-card">
+            <span class="stat-number">26+</span>
+            <span class="stat-label">Production APIs</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number">3.1k+</span>
+            <span class="stat-label">req/s Benchmark</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number">7</span>
+            <span class="stat-label">Graph AI Nodes</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number">8.1</span>
+            <span class="stat-label">BCA CGPA</span>
+          </div>
         </div>
       </div>
     </section>
@@ -187,19 +194,19 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- 2-COLUMN DYNAMIC PROJECT SHOWCASE GRID -->
     <section class="container projects-section fade-in-section" id="projects">
-      <div class="section-header">
+      <div class="section-header" style="text-align: center;">
         <span class="section-tag">Selected Work</span>
-        <h2 class="section-title">Production & AI Projects</h2>
-        <p class="section-subtitle">
-          Outcome-first backend applications and agentic systems built with modern engineering standards.
+        <h2 class="section-title">Featured Projects & AI Agents</h2>
+        <p class="section-subtitle" style="margin: 0.5rem auto 0 auto;">
+          Click any project card to open its interactive architecture & load test modal drawer.
         </p>
       </div>
 
-      <div class="projects-grid">
-        <!-- Project 1 (Flagship) -->
-        <article class="spotlight-card project-card">
+      <div class="projects-showcase-container">
+        <!-- Flagship Showcase Banner (Full Width) -->
+        <article class="project-flagship-card" data-project-id="project-kyh">
           <div class="project-preview">
             <img
               src="img/project-kyh-ui.png"
@@ -210,15 +217,14 @@
           <div class="project-details">
             <div class="project-meta">
               <h3 class="project-title">Project KYH — AI Fitness Agent</h3>
-              <span class="project-badge">Flagship Agent</span>
+              <span class="project-badge">Flagship AI Agent</span>
             </div>
             <p class="project-summary">
               Asynchronous multi-agent health coach using LangGraph, orchestrating 7 graph nodes and microservices deployed on AWS EC2.
             </p>
             <ul class="project-highlights">
               <li>Architected a 7-node LangGraph multi-agent workflow to decouple intake tracking from macro planning logic.</li>
-              <li>Containerized Node.js and Python microservices via Docker Compose and deployed to a dedicated AWS EC2 instance.</li>
-              <li>Integrated session persistence synced with MongoDB Atlas to evaluate 30-day dietary behavior trends.</li>
+              <li>Containerized Node.js and Python microservices via Docker Compose and deployed to a dedicated AWS EC2 cloud instance.</li>
             </ul>
             <div class="tech-tags" style="margin-bottom: 1.25rem;">
               <span class="tech-tag">Python</span>
@@ -226,9 +232,12 @@
               <span class="tech-tag">Node.js</span>
               <span class="tech-tag">Docker Compose</span>
               <span class="tech-tag">AWS EC2</span>
-              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">MongoDB Atlas</span>
             </div>
             <div class="project-links">
+              <button class="btn btn-primary open-modal-btn" data-project-id="project-kyh">
+                View Architecture ↗
+              </button>
               <a
                 href="https://kyh.bhuktatech.in/"
                 target="_blank"
@@ -236,181 +245,193 @@
                 class="btn btn-secondary"
                 >Live Demo ↗</a
               >
-              <a
-                href="https://github.com/megabytis/project-kyh"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-                >GitHub ↗</a
-              >
             </div>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="spotlight-card project-card">
-          <div class="project-preview">
-            <img
-              src="img/RAG_documenQnA.gif"
-              alt="RAG Document Intelligence System Demo"
-              class="project-img"
-            />
-          </div>
-          <div class="project-details">
-            <div class="project-meta">
-              <h3 class="project-title">RAG-DocumentQnA — AI Document Search</h3>
-              <span class="project-badge">RAG Intelligence</span>
+        <!-- 2-Column Grid Cards -->
+        <div class="projects-2col-grid">
+          <!-- Project 2 -->
+          <article class="project-grid-card" data-project-id="rag-documentqna">
+            <div class="project-preview">
+              <img
+                src="img/RAG_documenQnA.gif"
+                alt="RAG Document Intelligence System Demo"
+                class="project-img"
+              />
             </div>
-            <p class="project-summary">
-              Dual-service architecture supporting multi-format document parsing with Hybrid Search and Cross-Encoder re-ranking.
-            </p>
-            <ul class="project-highlights">
-              <li>Built Node.js API Gateway + Python AI backend supporting PDF, TXT, and DOCX parsing with per-user isolation.</li>
-              <li>Reduced hallucination rates via Dense Embeddings + BM25 Sparse Search and Cross-Encoder re-ranking in ChromaDB.</li>
-            </ul>
-            <div class="tech-tags" style="margin-bottom: 1.25rem;">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">ChromaDB</span>
-              <span class="tech-tag">LangChain</span>
-              <span class="tech-tag">Hybrid Search</span>
+            <div class="project-details">
+              <div class="project-meta">
+                <h3 class="project-title">RAG-DocumentQnA</h3>
+                <span class="project-badge">RAG AI Search</span>
+              </div>
+              <p class="project-summary">
+                Dual-service architecture supporting multi-format document parsing with Hybrid Search and Cross-Encoder re-ranking.
+              </p>
+              <ul class="project-highlights">
+                <li>Node.js API Gateway + Python AI backend with BM25 Hybrid Search.</li>
+              </ul>
+              <div class="tech-tags" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">ChromaDB</span>
+                <span class="tech-tag">LangChain</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary open-modal-btn" data-project-id="rag-documentqna">
+                  View Architecture ↗
+                </button>
+                <a
+                  href="https://github.com/megabytis/RAG-DocumentQnA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                  >GitHub ↗</a
+                >
+              </div>
             </div>
-            <div class="project-links">
-              <a
-                href="https://github.com/megabytis/RAG-DocumentQnA"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-                >GitHub ↗</a
-              >
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 3 -->
-        <article class="spotlight-card project-card">
-          <div class="project-preview">
-            <img
-              src="img/shopnexus-ui.png"
-              alt="ShopNexus E-commerce Platform UI"
-              class="project-img"
-            />
-          </div>
-          <div class="project-details">
-            <div class="project-meta">
-              <h3 class="project-title">ShopNexus — E-Commerce Platform</h3>
-              <span class="project-badge">Full-Stack System</span>
+          <!-- Project 3 -->
+          <article class="project-grid-card" data-project-id="shopnexus">
+            <div class="project-preview">
+              <img
+                src="img/shopnexus-ui.png"
+                alt="ShopNexus E-commerce Platform UI"
+                class="project-img"
+              />
             </div>
-            <p class="project-summary">
-              High-concurrency backend system load-tested under micro-burst concurrency with Stripe payment lifecycle and RBAC.
-            </p>
-            <ul class="project-highlights">
-              <li>Load-tested with k6 at 3,100+ requests under peak 50 virtual user concurrency to identify database bottlenecks.</li>
-              <li>Built Stripe payment lifecycle with idempotent webhook processing across 12+ MongoDB models.</li>
-              <li>Implemented JWT authentication with refresh token rotation and rate-limiting across 25+ API routes.</li>
-            </ul>
-            <div class="tech-tags" style="margin-bottom: 1.25rem;">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Redis</span>
-              <span class="tech-tag">Stripe</span>
-              <span class="tech-tag">k6</span>
+            <div class="project-details">
+              <div class="project-meta">
+                <h3 class="project-title">ShopNexus E-Commerce</h3>
+                <span class="project-badge">3.1k req/s Benchmark</span>
+              </div>
+              <p class="project-summary">
+                High-concurrency backend system load-tested under micro-burst concurrency with Stripe payment lifecycle and RBAC.
+              </p>
+              <ul class="project-highlights">
+                <li>Profiled under k6 concurrency; Stripe payment webhook lifecycle.</li>
+              </ul>
+              <div class="tech-tags" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Redis</span>
+                <span class="tech-tag">Stripe</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary open-modal-btn" data-project-id="shopnexus">
+                  View Architecture ↗
+                </button>
+                <a
+                  href="https://shop-nexus-beta.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                  >Live Demo ↗</a
+                >
+              </div>
             </div>
-            <div class="project-links">
-              <a
-                href="https://shop-nexus-beta.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-                >Live Demo ↗</a
-              >
-              <a
-                href="https://github.com/megabytis/shopnexus"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-                >GitHub ↗</a
-              >
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 4 (DevTinder) -->
-        <article class="spotlight-card project-card">
-          <div class="project-preview">
-            <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background: #181822; color:#71717a; font-weight:600; font-size:1.1rem;">
-              <span>DevTinder UI Platform</span>
+          <!-- Project 4 (DevTinder) -->
+          <article class="project-grid-card" data-project-id="devtinder">
+            <div class="project-preview">
+              <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background: #161620; color:#71717a; font-weight:600; font-size:1rem;">
+                <span>DevTinder Networking UI</span>
+              </div>
             </div>
-          </div>
-          <div class="project-details">
-            <div class="project-meta">
-              <h3 class="project-title">DevTinder — Developer Matchmaking</h3>
-              <span class="project-badge">Networking App</span>
+            <div class="project-details">
+              <div class="project-meta">
+                <h3 class="project-title">DevTinder Matchmaking</h3>
+                <span class="project-badge">Networking</span>
+              </div>
+              <p class="project-summary">
+                Full-stack developer networking application enabling profile discovery and connection request lifecycles.
+              </p>
+              <ul class="project-highlights">
+                <li>Matchmaking request pipeline with indexed query optimization.</li>
+              </ul>
+              <div class="tech-tags" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">React</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary open-modal-btn" data-project-id="devtinder">
+                  View Architecture ↗
+                </button>
+                <a
+                  href="https://github.com/megabytis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                  >GitHub ↗</a
+                >
+              </div>
             </div>
-            <p class="project-summary">
-              Full-stack developer matchmaking application enabling developer profile discovery and connection requests.
-            </p>
-            <ul class="project-highlights">
-              <li>Engineered matchmaking request pipeline (send, accept, ignore) with database query indexing.</li>
-              <li>Implemented secure JWT authentication cookies and sanitized user profile schemas.</li>
-            </ul>
-            <div class="tech-tags" style="margin-bottom: 1.25rem;">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">React</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://github.com/megabytis"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-                >GitHub ↗</a
-              >
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Project 5 (LearnSphere) -->
-        <article class="spotlight-card project-card">
-          <div class="project-preview">
-            <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background: #181822; color:#71717a; font-weight:600; font-size:1.1rem;">
-              <span>LearnSphere System</span>
+          <!-- Project 5 (LearnSphere) -->
+          <article class="project-grid-card" data-project-id="learnsphere">
+            <div class="project-preview">
+              <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background: #161620; color:#71717a; font-weight:600; font-size:1rem;">
+                <span>LearnSphere Platform</span>
+              </div>
             </div>
-          </div>
-          <div class="project-details">
-            <div class="project-meta">
-              <h3 class="project-title">LearnSphere — Course Platform</h3>
-              <span class="project-badge">EdTech Backend</span>
+            <div class="project-details">
+              <div class="project-meta">
+                <h3 class="project-title">LearnSphere Platform</h3>
+                <span class="project-badge">EdTech Engine</span>
+              </div>
+              <p class="project-summary">
+                Interactive learning management backend for course distribution and student progress tracking.
+              </p>
+              <ul class="project-highlights">
+                <li>Modular RESTful endpoints for lesson sequencing & progress stats.</li>
+              </ul>
+              <div class="tech-tags" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">REST APIs</span>
+              </div>
+              <div class="project-links">
+                <button class="btn btn-primary open-modal-btn" data-project-id="learnsphere">
+                  View Architecture ↗
+                </button>
+                <a
+                  href="https://github.com/megabytis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                  >GitHub ↗</a
+                >
+              </div>
             </div>
-            <p class="project-summary">
-              Interactive learning management backend for course distribution and student progress tracking.
-            </p>
-            <ul class="project-highlights">
-              <li>Designed modular RESTful endpoints for lesson sequencing and progress state updates.</li>
-              <li>Optimized MongoDB schema design for fast retrieval of course structures and user stats.</li>
-            </ul>
-            <div class="tech-tags" style="margin-bottom: 1.25rem;">
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">REST APIs</span>
-            </div>
-            <div class="project-links">
-              <a
-                href="https://github.com/megabytis"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn btn-secondary"
-                >GitHub ↗</a
-              >
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
+
+    <!-- Holographic Modal Drawer Container -->
+    <div class="modal-overlay" id="project-modal">
+      <div class="modal-card">
+        <button class="modal-close-btn" id="modal-close-btn">✕</button>
+        <div class="modal-header">
+          <span class="modal-badge" id="modal-badge">Architecture Breakdown</span>
+          <h2 class="modal-title" id="modal-title">Project Details</h2>
+          <p class="modal-subtitle" id="modal-subtitle"></p>
+        </div>
+        <div class="modal-preview" id="modal-preview-container">
+          <img src="" alt="" id="modal-img" class="modal-img" />
+        </div>
+        <h4 class="modal-section-title">Key Engineering Highlights & Impact</h4>
+        <ul class="modal-highlights" id="modal-highlights"></ul>
+        <div class="tech-tags" id="modal-tags" style="margin-bottom: 1.5rem;"></div>
+        <div class="modal-actions" id="modal-actions"></div>
+      </div>
+    </div>
 
     <!-- Experience / Journey Section -->
     <section class="container timeline-section fade-in-section" id="experience">
@@ -518,7 +539,7 @@
     <footer class="footer">
       <div class="container footer-content">
         <p class="footer-text">
-          &copy; <span id="current-year"></span> Madhusudan Bhukta. Designed with precision & motion.
+          &copy; <span id="current-year"></span> Madhusudan Bhukta. Designed with spatial motion & precision.
         </p>
         <div class="footer-links">
           <a href="mailto:madhusudanbhukta.dev@gmail.com" class="footer-link">Email</a>
@@ -530,7 +551,7 @@
 
     <!-- JS Dependencies -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="three-bg.js"></script>
-    <script src="script.js"></script>
+    <script src="three-bg.js?v=5"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>
