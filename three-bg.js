@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Renderer settings
     const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
 
     // Group for all floating objects
     const group = new THREE.Group();
@@ -83,37 +83,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const dust = new THREE.Points(dustGeometry, dustMaterial);
     scene.add(dust);
 
-    // Removed mouse parallax tracking to keep the background serene and non-disturbing
+    // Animation control
+    let animationFrameId = null;
+    const clock = new THREE.Clock();
 
     // Disable Three.js on mobile screens < 768px for optimal performance & battery
     const checkMobile = () => {
         if (window.innerWidth < 768) {
             canvas.style.display = 'none';
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+                animationFrameId = null;
+            }
             return true;
         }
         canvas.style.display = 'block';
         return false;
     };
 
-    if (checkMobile()) return;
-
-    // Resize handler
-    window.addEventListener('resize', () => {
-        if (checkMobile()) return;
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-
-    // Animation loop
-    const clock = new THREE.Clock();
-
     function animate() {
         if (window.innerWidth < 768) {
             canvas.style.display = 'none';
+            animationFrameId = null;
             return;
         }
-        requestAnimationFrame(animate);
+        animationFrameId = requestAnimationFrame(animate);
 
         const elapsedTime = clock.getElapsedTime();
 
@@ -123,12 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Animate individual shapes gently
         shapes.forEach(shape => {
-            // Smooth rotation
             shape.rotation.x += shape.userData.rotationSpeed.x;
             shape.rotation.y += shape.userData.rotationSpeed.y;
             shape.rotation.z += shape.userData.rotationSpeed.z;
-
-            // Gentle floating up and down
             shape.position.y = shape.userData.initialY + Math.sin(elapsedTime * shape.userData.floatSpeed + shape.userData.floatOffset) * 1.5;
         });
         
@@ -138,6 +129,19 @@ document.addEventListener("DOMContentLoaded", () => {
         renderer.render(scene, camera);
     }
 
-    // Start animation
-    animate();
+    if (!checkMobile()) {
+        animate();
+    }
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+        const isMobile = checkMobile();
+        if (isMobile) return;
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        if (!animationFrameId) {
+            animate();
+        }
+    });
 });

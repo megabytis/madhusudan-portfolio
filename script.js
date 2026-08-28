@@ -146,34 +146,103 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Dynamic Spotlight Cursor & 3D Tilt Micro-Interaction
+    // 2. Mobile Navigation Drawer Toggle Logic
+    const navToggle = document.getElementById("nav-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link, .mobile-cta-btn");
+    const floatingNavContainer = document.querySelector(".floating-nav-container");
+
+    function openMobileMenu() {
+        if (!navToggle || !mobileMenu) return;
+        navToggle.classList.add("open");
+        navToggle.setAttribute("aria-expanded", "true");
+        mobileMenu.classList.add("open");
+        mobileMenu.setAttribute("aria-hidden", "false");
+    }
+
+    function closeMobileMenu() {
+        if (!navToggle || !mobileMenu) return;
+        navToggle.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+        mobileMenu.classList.remove("open");
+        mobileMenu.setAttribute("aria-hidden", "true");
+    }
+
+    function toggleMobileMenu() {
+        if (mobileMenu && mobileMenu.classList.contains("open")) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    }
+
+    if (navToggle) {
+        navToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMobileMenu();
+        });
+    }
+
+    // Close mobile menu on any link click
+    mobileNavLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            closeMobileMenu();
+        });
+    });
+
+    // Close mobile menu on outside tap/click
+    document.addEventListener("click", (e) => {
+        if (floatingNavContainer && !floatingNavContainer.contains(e.target)) {
+            closeMobileMenu();
+        }
+    });
+
+    // Close on escape key
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            closeMobileMenu();
+        }
+    });
+
+    // Close mobile menu if window resized to desktop width
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            closeMobileMenu();
+        }
+    });
+
+    // 3. Dynamic Spotlight Cursor & 3D Tilt Micro-Interaction (Desktop only)
+    const isTouchDevice = () => window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
     const spotlightCards = document.querySelectorAll(
         ".hero-stat-card, .hero-image-wrapper, .project-flagship-card, .project-grid-card, .spotlight-card, .bento-card, .timeline-content-card, .terminal-card"
     );
 
-    spotlightCards.forEach(card => {
-        card.addEventListener("mousemove", e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
+    if (!isTouchDevice()) {
+        spotlightCards.forEach(card => {
+            card.addEventListener("mousemove", e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
 
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
+                card.style.setProperty("--mouse-x", `${x}px`);
+                card.style.setProperty("--mouse-y", `${y}px`);
 
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -3; // Max 3 deg
-            const rotateY = ((x - centerX) / centerX) * 3;  // Max 3 deg
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3; // Max 3 deg
+                const rotateY = ((x - centerX) / centerX) * 3;  // Max 3 deg
 
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
+            });
         });
+    }
 
-        card.addEventListener("mouseleave", () => {
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
-        });
-    });
-
-    // 3. Scroll Reveal Animations via IntersectionObserver
+    // 4. Scroll Reveal Animations via IntersectionObserver
     const observerOptions = {
         root: null,
         rootMargin: "0px",
@@ -201,9 +270,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 100 + idx * 100);
     });
 
-    // 4. Floating Navbar Active Link ScrollSpy
+    // 5. Floating Navbar Active Link ScrollSpy
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-links .nav-link");
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
     const scrollSpyOptions = {
         root: null,
@@ -216,6 +286,13 @@ document.addEventListener("DOMContentLoaded", () => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute("id");
                 navLinks.forEach(link => {
+                    if (link.getAttribute("href") === `#${id}`) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                });
+                mobileLinks.forEach(link => {
                     if (link.getAttribute("href") === `#${id}`) {
                         link.classList.add("active");
                     } else {
